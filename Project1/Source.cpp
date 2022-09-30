@@ -16,7 +16,7 @@ void main() {
 
 	srand(time(0));
 
-	//welcomeScreen();
+	welcomeScreen();
 	ShowMenu();
 
 }
