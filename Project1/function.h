@@ -134,7 +134,7 @@ void showMyships(int** arr, int size) {
 		}
 		cout << endl << endl;
 	}
-	
+
 }
 
 
@@ -152,7 +152,7 @@ void showRivalShips(int** arr, int size) {
 
 				mysetcolor(14, 0);
 				cout << " " << char(4) << "  ";
-				//mysetcolor(7, 0);
+
 			}
 
 			else if (arr[i][j] == 0) {
@@ -175,14 +175,9 @@ void showRivalShips(int** arr, int size) {
 				mysetcolor(7, 0);
 			}
 
-			//else if (arr[i][j] == 6) {
-
-			//	mysetcolor(6, 0);
-			//	cout << char(219) << "  ";
-			//}
 
 			else {
-				mysetcolor(4, 0);
+				mysetcolor(3, 0);
 				cout << "|" << char(219) << "| ";
 			}
 		}
@@ -774,7 +769,6 @@ void battleRandom(int** arr)
 
 			if (!strike.left_Access) {
 
-				//strike.left_Access = true;
 				if (strike.left == false) {
 
 					x = strike.striked_x - 1;
@@ -848,8 +842,6 @@ void battleRandom(int** arr)
 						arr[y][x] = 2;
 						strike.left = false;
 						strike.left_Access = true;
-						//strike.up_Access = true;
-						//strike.dowm_Access = true;
 						Sleep(500);
 						showMetods();
 						break;
@@ -887,8 +879,7 @@ void battleRandom(int** arr)
 						arr[y][x] = 2;
 						strike.left = false;
 						strike.left_Access = true;
-						//strike.dowm_Access = true;
-						//strike.up_Access = true;
+
 						Sleep(500);
 						showMetods();
 						break;
@@ -898,7 +889,6 @@ void battleRandom(int** arr)
 
 			if (!strike.right_Access) {
 
-				//strike.right Access = true;
 				if (strike.right == false) {
 
 					x = strike.striked_x + 1;
@@ -973,8 +963,6 @@ void battleRandom(int** arr)
 						arr[y][x] = 2;
 						strike.right = false;
 						strike.right_Access = true;
-						//strike.up_Access = true;
-						//strike.dowm_Access = true;
 						Sleep(500);
 						showMetods();
 						break;
@@ -1021,7 +1009,6 @@ void battleRandom(int** arr)
 
 			if (!strike.dowm_Access) {
 
-				//strike.down_Access = true;
 				if (strike.dowm == false) {
 
 					x = strike.striked_x;
@@ -1141,7 +1128,6 @@ void battleRandom(int** arr)
 
 			if (!strike.up_Access) {
 
-				//strike.up_Access = true;
 				if (strike.up == false) {
 
 					x = strike.striked_x;
@@ -1318,14 +1304,14 @@ void ShowMenu() {
 	while (true) {
 
 		if (select == 1) {
-				Show_Text(R"(
-								~ ~                                                         ~ ~
-							 __/___                                                      __/___
-					   _____/______|                                               _____/______|
+			Show_Text(R"(
+				    	     ~ ~                                                         ~ ~
+				         __/___                                                      __/___
+				   _____/______|                                               _____/______|
 			   _______/_____\_______\_____                                 _______/_____\_______\_____
 			   \   Random     < < < [0]   \                                \   Manual     < < < [1]   \
 			 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ )", 10);
-				cin >> select;
+			cin >> select;
 
 			if (select == 0) {
 
@@ -1359,7 +1345,6 @@ void ShowMenu() {
 
 				}
 			}
-			//Fight Place
 		}
 	}
 }
